@@ -1,0 +1,18 @@
+<h1>Alteração de Livros</h1>
+{{#each result}}
+<form action="/books/alterabook" method="POST">
+  <div class="mb-3">
+    <label for="id" class="form-label">ID</label>
+    <input type="hidden" class="form-control" id="id" aria-describedby="emailHelp" name="id" value="{{this.id}}">
+  </div>
+  <div class="mb-3">
+    <label for="titulo" class="form-label">Titulo</label>
+    <input type="text" class="form-control" id="titulo" aria-describedby="emailHelp" name="titulo" value="{{this.titulo}}">
+  </div>
+  <div class="mb-3">
+    <label for="nmr_pags" class="form-label">Número de Páginas</label>
+    <input type="number" class="form-control" id="nmr_pags" name="nmr_pags" value="{{this.nmr_pags}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{/each}}
