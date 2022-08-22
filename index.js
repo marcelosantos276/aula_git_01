@@ -21,6 +21,10 @@ app.get('/', (req,res) => {
     res.render('home')
 })
 
+app.get('/books/inserirbook', (req,res) =>{
+    res.render('inserir')
+})
+
 app.get('/books/listabook',(req,res)=>{
     const sql = 'SELECT * FROM books'
     conn.query(sql,function(err,result) {
